@@ -199,7 +199,7 @@ export class Unit extends makeRenderable(GameObject, SHOULD_RENDER) {
         );
 
         if (current.owner !== next.owner) {
-            this.ownerID = next.owner && next.owner.id;
+            this.ownerID = next.owner ? next.owner.id : undefined;
             this.recolor();
         }
 
